@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Forecast</h1>
+    <input type="text" id="locationInput" placeholder="Enter location">
+    <button onclick="getWeather()">Get Weather</button>
+    <p><a href="index1.html">Go Back</a></p>
+    <div id="weatherInfo"></div>
+  </div>
+  <script>
+    function getWeather() {
+      const apiKey = '88ea5541c5bdccd8b5198e21248468aa'; // Replace with your API key
+      const locationInput = document.getElementById('locationInput').value;
+    
+      if (locationInput === '') {
+        alert('Please enter a location.');
+        return;
+      }
+    
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(locationInput)}&appid=${apiKey}`;
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const countryCode = data.sys.country;
+          fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
+            .then(response => response.json())
+            .then(countryData => {
+              const countryName = countryData[0].name.common;
+              const weatherInfo = document.getElementById('weatherInfo');
+              weatherInfo.innerHTML = `
+                <h2>${data.name}, ${countryName}</h2>
+                <p>Temperature: ${Math.round(data.main.temp - 273.15)}°C</p>
+                <p>Weather: ${data.weather[0].description}</p>
+                <p>Humidity: ${data.main.humidity}%</p>
+                <p>Pressure: ${data.main.pressure}%</p>
+                <p>Air: ${data.wind.speed}Km/h</p>
+              `;
+            })
+            .catch(error => {
+              console.error('Error fetching country data:', error);
+              alert('Error fetching country data. Please try again.');
+            });
+        })
+        .catch(error => {
+          console.error('Error fetching weather data:', error);
+          alert('Error fetching weather data. Please try again.');
+        });
+    }
+    </script>
+    
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      color: rgb(210, 223, 18);
+      background-image: url("C:/Users/ss289/OneDrive/Desktop/js3.jpg");
+      */background-color: #16ec2f;/
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: #f70707;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(34, 207, 237, 0.1);
+    }
+    
+    input {
+      padding: 10px;
+      margin: 10px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+    
+    #weatherInfo {
+      margin-top: 20px;
+    }
+    h2{
+      color:orange;
+    }
+  </style>
+</body>
+</html>

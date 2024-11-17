@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+
+		/* Styling the body */
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		/* Styling the first parallax's 
+		height, width and background color */
+		.parallax-1 {
+			width: 100%;
+			height: 600px;
+			background-image: url("ship1.jpg");
+			background-size: 100% 100%;
+			background-attachment: fixed;
+		}
+
+		/* Styling the title of first parallax */
+		.parallax-1 h2 {
+			margin: auto;
+			position: relative;
+			left: 500x;
+			top: 300px;
+			width: 250px;
+			height: 32px;
+			padding: 10px;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+
+		/* Styling the second parallax's 
+		height, width and background color */
+		.parallax-2 {
+			width: 100%;
+			height: 600px;
+			background: url('ship2.jpg');
+            background-size: 100% 100%;
+			background-attachment: fixed;
+		}
+
+		/* Styling the title of second parallax */
+		.parallax-2 h2 {
+			margin: auto;
+			position: relative;
+			left: 500x;
+			top: 300px;
+			width: 250px;
+			height: 37px;
+			padding: 10px;
+			background-color: white;
+			color: black;
+			text-align: center;
+			font-size: 30px;
+			font-family: Verdana;
+		}
+
+		/* Styling the content or paragraph */
+		.para-1 {
+			padding: 50px;
+			background-color: black;
+			color: white;
+			font-size: 17px;
+		}
+
+		/* Styling the content or paragraph */
+		.para-2 {
+			text-align: center;
+			padding: 25px;
+			font-size: 17px;
+			font-family: Verdana;
+			background-color: black;
+			color: white;
+		}
+		.btn button {
+			background-color: #0000ff; /* Background color for the button */
+			color: #fff; /* Text color for the button */
+			padding: 10px 20px; /* Padding to provide spacing around the text */
+			border: none; /* Remove the button border */
+			border-radius: 20px; /* Rounded corners for the button */
+			outline: none;
+			cursor: pointer;
+			transition: background-color 0.2s; /* Smooth transition for background color change */
+		  }
+		
+		  .btn button:hover {
+			background-color: #00f; /* Background color on hover */
+		  }
+		   /* Positioning for the button container */
+		   .btn {
+            position: absolute;
+            top: 20px; /* Adjust the top value to control the vertical position */
+            right: 20px; /* Adjust the right value to control the horizontal position */
+        }
+		/* CSS for the popup */
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #000;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+	max-width: 80%;
+	max-height: 80%;
+	overflow: auto;
+  }
+  
+  /* CSS for the close button */
+  .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+  }
+  
+  /* CSS for the "Read More" link */
+  a {
+	text-decoration: none;
+	color: blue;
+	cursor: pointer;
+  }
+  
+	</style>
+	<script>
+		function togglePopup() {
+            var popup = document.getElementById("popup");
+
+            if (popup.style.display === "block") {
+                // If the popup is currently open, close it
+                popup.style.display = "none";
+            } else {
+                // If the popup is currently closed, open it
+                popup.style.display = "block";
+            }
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popup");
+
+            // Hide the overlay and popup
+            popup.style.display = "none";
+        }
+	</script>
+</head>
+
+<body>
+	<div class="btn">
+		<!-- Use a form to create a button for redirection -->
+		<form id="form" action="about.html" method="GET">
+			<button type="submit">ABOUT</button>
+		</form>
+	</div>
+
+
+	<!-- Giving title of the first parallax -->
+	<div class="parallax-1">
+		<h2>Home Page</h2>
+	</div>
+
+	<!--Content of first parallax -->
+	<div class="para-1">
+		<p>
+			Pirates of the Caribbean is an American fantasy supernatural swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the eponymous media franchise. The film plots are based on a fictionalized version of the Golden Age of Piracy (circa 1650 – 1726), and are set primarily in the Caribbean.
+
+Directors of the series include Gore Verbinski (films 1–3), Rob Marshall, Joachim Rønning , and Espen Sandberg . The series is primarily written by Ted Elliott and Terry Rossio ; other writers include Stuart Beattie, Jay Wolpert and Jeff Nathanson .
+The stories follow the adventures of Captain Jack Sparrow (Johnny Depp), with Hector Barbossa (Geoffrey Rush), Will Turner (Orlando Bloom), Elizabeth Swann (Keira Knightley), and Joshamee Gibbs (Kevin McNally) over the course of the films. Other characters featured in the original trilogy include James Norrington (Jack Davenport), Pintel (Lee Arenberg), Ragetti (Mackenzie Crook), Marty (Martin Klebba), Cotton (David Bailie), Murtogg and Mullroy (Giles New & Angus Barnett), Bootstrap Bill Turner (Stellan Skarsgård), Lord Cutler Beckett (Tom Hollander), Governor Swann (Jonathan Pryce), Tia Dalma (Naomie Harris), and Davy Jones (Bill Nighy).		
+</p>
+	</div>
+
+	<!-- Giving title of the first parallax -->
+	<div class="parallax-2">
+		<h2>COLLECTIONS</h2>
+	</div>
+
+	<!--Content of first parallax -->
+	<div class="para-2">
+		<p>
+			Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+			Blacksmith Will Turner teams up with eccentric pirate Captain Jack Sparrow to save Turner's love, Elizabeth Swann, from cursed pirates led by Jack's mutinous former first mate, Hector Barbossa. Jack wants revenge against Barbossa, who left him stranded on an island before stealing his ship, the Black Pearl, along with 882 pieces of cursed Aztec Gold.
+			</p>
+			<p>
+			Pirates of the Caribbean: Dead Man's Chest (2006)
+			Lord Cutler Beckett of the East India Trading Company arrests Will and Elizabeth for aiding Captain Jack Sparrow in the previous film. Beckett offers clemency if Will agrees to search for Jack's compass in a bid to find the Dead Man's Chest—and inside, the heart of villainous Davy Jones—which would give Beckett control of the seas. However, Jack wants the Chest to escape from an unpaid debt with Jones, who made Jack captain of the Black Pearl for 13 years in exchange for 100 years of service aboard Jones' ship, the Flying Dutchman. Sparrow's debt is complicated by both Will Turner and Elizabeth Swann, who follow him out to sea.
+		<a href="collections.html">Read More</a>
+		</p>
+	</div>
+
+	<!--This will be same as first parallax-->
+	<div class="parallax-1">
+		<h2>ACHIEVEMENTS</h2>
+	</div>
+
+	<div class="para-2">
+        <!-- Add this HTML code inside your para-2 div -->
+        <p>
+			The Film made a worldwide total income of $4.524 billion(Total 5 Films.)
+			It became one of the most searched movie collection and favourite among all.
+            <a href="javascript:void(0);" onclick="togglePopup()">Click for Stats.</a>
+        </p>
+
+        <div class="popup" id="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img src="table1.png" alt="Image" id="popup-image">
+        </div>
+    </div>
+
+</body>
+</html>

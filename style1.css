@@ -1,0 +1,373 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fef1e1 !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+.container {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    background-color: #ebd4c4; /* Adjust the last value (0.8) for the level of translucency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow effect */
+
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px !important;
+    background-color: #96A3A9;
+    /* Gradient Background */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#68E3F9", endColorstr="#F55A9B", GradientType=1);   
+}
+h3{
+    color: darkorange !important;
+    
+}
+
+#searchInput {
+    font-style: italic;
+    font-size: medium;
+    font-weight: bold;
+    width: 25%;     
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 8px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #50897D;
+    border-radius: 8px;
+  }
+
+#google-results, #openl-results {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-y: auto; /* Enable horizontal scrolling for results */
+    white-space: nowrap; /* Prevent line breaks */
+}
+#slibrary-results {
+    justify-content:flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-y: auto;
+}
+
+#slibrary-results p {
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 10px; /* Adjust margin bottom */
+}
+
+#slibrary-results a {
+    /* color: #007bff; Adjust link color */
+    text-decoration: none; /* Remove underline */
+}
+
+
+header {
+    background-color: #483436;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #483436 !important;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+}
+nav a:hover{
+    transition: ease-in;
+}
+.book-container {
+    width: 250px !important;
+    height: 320px !important; /* Set your desired height here */
+    margin: 1em;
+    padding: 10px;
+    background-color: #E0E0D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    font-weight: lighter;
+    border: 2px solid darkgrey;
+}
+
+.book {
+    width: 250px !important;
+    height: 320px !important;
+    font-weight: lighter;
+    margin: 1em;
+    padding: 10px;
+    background-color: #E0E0D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    border: 2px solid darkgrey;
+}
+
+.book p, .book-container p {
+    width: 230px !important;
+    overflow: hidden;
+}
+
+.book-card p{
+    width: 230px !important;    
+    padding: auto;
+    margin: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    padding: 5px !important;
+
+}
+.book-card {
+    width: 250px !important;
+    height: 320px !important;
+    font-weight: lighter;
+    margin: 1em;
+    padding: 10px;
+    background-color: #E0E0D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    border: 2px solid darkgrey;
+    margin-bottom: 1em;
+    
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.book img {
+    align-items: center;
+    object-fit: cover; /* Maintain aspect ratio and cover the specified dimensions */
+    border: 2px solid #0d0d0d; /* Optional: Add a border for better visibility */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    border-style: groove;
+}
+
+.book-container img {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-style: groove;
+
+}
+.book:hover {
+    transform: scale(1.05);
+}
+.book-container:hover {
+    transform: scale(1.05);
+}
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position:unset;
+    bottom: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+h1{
+    font-style: normal;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-size: xx-large;
+}
+h4{
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-size: large;
+    font-style: oblique;
+    
+}
+#google-results p, #openl-results p{
+    width: 240px;
+    overflow: hidden;
+}
+
+
+p,b{
+    /* width: 210px; */
+    margin: 0 !important;
+    font-weight: 400;
+}
+b{
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+ /* Style for the help box */
+ .help-box {
+    background-color: lightgray;
+    border: 2px solid #f4540a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1080px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the heading */
+.help-box h3 {
+    color: #3215ec;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+/* Style for the paragraphs */
+.help-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.feedback-link {
+    color: #007bff; /* Change color to your preference */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.feedback-link:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+.feedback{
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .date-time {
+        position: static;
+        margin-top: 10px;
+    }
+}
+
+.date-time {
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    color: #ffffff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    font-size: 16px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .date-time {
+        font-size: 12px;
+        width: 100vw;
+        text-align: center;
+    }
+}
+
+
+/* /Successfull login and signup messages */
+
+.login-message {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-message h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-message p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.login-message a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-message a:hover {
+    color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container h2{
+    color: darkred;
+    font-size: xx-large;
+}
+
+
+/* .blurry-text {
+    transition: filter 0.3s ease;
+}
+
+.blurry-text:hover {
+    filter: blur(4px);
+}
+
+.blurry-text:hover::before, .blurry-content:hover::before {
+    content: 'Please Login to access this section..!! <a href= "login.html">Click Here for Login</a>';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+} */

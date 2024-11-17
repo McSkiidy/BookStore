@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .body {
+            padding: 0;
+            margin: 0;
+        }
+        .navbar  {
+            background-color: #4d08d8; /* Change to your desired highlight color */
+            color: #14df2f; /* Change to your desired text color */
+        }
+        .navbar .nav-item.active .nav-link, .gallery-link {
+            background-color: blue !important; /* Add this line to set the background color for the Gallery button */
+        }
+        .navbar .gallery-link.nav-link {
+            background-color: blue;
+            color: white; /* Add text color for visibility */
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .card {
+            flex: 0 0 calc(33.33% - 20px);
+            height: auto;
+            margin: 2px;
+            transition: transform 1s ease;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000;
+        }
+
+        .card:hover img {
+            box-shadow: 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000;
+        }
+
+        .card-text {
+            user-select: none;
+        }
+
+        .card-body {
+            background-color: rgb(18, 223, 179);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(25, 229, 25);
+            animation: glow 10s ease-in-out infinite alternate, move 1s linear infinite alternate;
+            text-shadow: 0 0 10px #7ad40b, 0 0 20px #09db91, 0 0 30px #12e112;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #720dee, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            }
+            100% {
+                text-shadow: 0 0 20px #490bda, 0 0 30px #ff0000, 0 0 40px #ff0000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-info navbar-light bg-warning">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Login/Register</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="gallery.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="gallery-link" class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" action="home.html">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+<div id="navbar-container">
+    <h1>Welcome to Franchise's Gallery</h1>
+</div>
+<div class="cards">
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js1.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js2.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js3.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js7.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js5.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js6.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js10.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js8.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+    <div class="card">
+        <a href="https://www.pinterest.com">
+            <img src="js9.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <p class="card-text">Welcome to my gallery or franchise.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
