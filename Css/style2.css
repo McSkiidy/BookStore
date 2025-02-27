@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+body
+{
+    background-image: url('naturebg2.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: auto;
+    min-height: 50vh;
+    background-image: url('p5.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1); /* Corrected syntax */
+
+}
+wrapper.a{
+    font-size: large;
+    box-sizing: revert;
+    overflow: scroll;
+    animation: revert-layer;
+    --bs-link-hover-color: auto;
+}
+h1 {
+    font-size: 3rem;
+    color: rgb(226, 222, 13) ! important;
+    margin-bottom: 1.2rem;
+}
+h2{
+    font-size: 3rem;
+    color: green;
+    margin-bottom: 1.2rem;
+}
+
+form input {
+    width: 100%;
+    outline: none;
+    border: 1px solid blue;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+    font-family: sans-serif;
+}
+
+button {
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    background: #0000ff;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transitions for scale and box-shadow */
+}
+
+button:hover {
+    background: #07e816; /* New background color */
+    transform: scale(1.05); /* Scale the button on hover */
+    box-shadow: 0 4px 4px rgb(231, 11, 11); /* Add a box-shadow on hover */
+}
+
+
+input:focus {
+    border: 1px solid rgb(11, 130, 227);
+}
+
+.terms {
+    margin-top: 0.2rem;
+}
+
+.terms input {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.terms label {
+    font-size: 1.5rem;
+    color: #0059ff;
+}
+
+.terms a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.member {
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+    color: #FFF000;
+}
+
+.member a {
+    color: rgb(17, 125, 188);
+    text-decoration: none;
+}
+
+.bi-whatsapp,.bi-twitter,.bi-facebook,.bi-github {
+    color: rgb(63, 222, 211) !important;  
+    spacing: 40px !important;
+    position: relative;  
+    transition:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+/* Add styling for the active class to highlight the link */
+.navbar  {
+    background-color: #4d08d8; /* Change to your desired highlight color */
+    color: #14df2f; /* Change to your desired text color */
+}
+.navbar-brand{
+    background-color: #ff2200;
+}
+p{
+    color:#14df2f;
+    font-size:1.0rem;
+}

@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Image with Opacity</title>
+</head>
+<body>
+    <h1> Image with Opacity</h1>
+
+</body>
+<style>
+    body {
+        position: relative;
+        height: 100vh;
+        margin: 100px;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("ship3.jpg");
+        background-size: cover;
+        opacity: 0.5; /* Set the opacity to 50% */
+    }
+</style>
+</html>
